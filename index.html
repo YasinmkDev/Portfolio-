@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yasin Malak - React Native Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-container">
+            <div class="nav-decoration"></div>
+            <div class="nav-logo">
+                <svg class="nav-logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                    <path d="M2 17l10 5 10-5"/>
+                    <path d="M2 12l10 5 10-5"/>
+                </svg>
+                <span>YasinMK </span>
+            </div>
+            <div class="nav-links">
+                <a href="#hero" class="nav-link">Home</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Work</a>
+                <a href="#process" class="nav-link">Process</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5"/>
+                    <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                </svg>
+                <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                </svg>
+            </button>
+            <button class="mobile-menu-toggle" id="mobileToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg-decoration">
+            <div class="floating-shape shape-1"></div>
+            <div class="floating-shape shape-2"></div>
+            <div class="floating-shape shape-3"></div>
+            <div class="floating-shape shape-4"></div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-left">
+                    <h1 class="hero-title">Building Mobile Apps That Users Love</h1>
+                    <p class="hero-subtitle">React Native developer specializing in cross-platform mobile solutions for startups and growing businesses.</p>
+                    <div class="hero-trust-badges">
+                        <span class="trust-badge">React Native Dev</span>
+                        <span class="trust-badge">2+ Live Projects</span>
+                        <span class="trust-badge">Firebase Expert</span>
+                    </div>
+                    <div class="hero-cta">
+                        <a href="#projects" class="btn btn-primary">View Work</a>
+                        <a href="#contact" class="btn btn-secondary">Hire Me</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="4">0</span>
+                            <span class="stat-label">Projects</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="98">0</span>
+                            <span class="stat-label">% Success Rate</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="24">0</span>
+                            <span class="stat-label">Hour Response</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-right">
+                    <div class="hero-decoration">
+                        <div class="code-snippet">
+                            <div class="code-line">
+                                <span class="code-keyword">const</span>
+                                <span class="code-variable">app</span>
+                                <span class="code-operator">=</span>
+                                <span class="code-string">'amazing'</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="device-mockup">
+                        <div class="phone-mockup">
+                            <div class="phone-screen">
+                                <div class="app-preview">
+                                    <div class="app-header"></div>
+                                    <div class="app-content">
+                                        <div class="app-element"></div>
+                                        <div class="app-element"></div>
+                                        <div class="app-element"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tablet-mockup">
+                            <div class="tablet-screen">
+                                <div class="app-preview">
+                                    <div class="app-sidebar"></div>
+                                    <div class="app-main"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="skills-bg-decoration">
+            <div class="grid-pattern"></div>
+        </div>
+        <div class="container">
+            <h2 class="section-title">Core Technologies</h2>
+            <div class="skills-intro">
+                <p>Crafting exceptional mobile experiences with cutting-edge technologies</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-chip">
+                    <div class="skill-glow"></div>
+                    <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                    </svg>
+                    <span>React Native</span>
+                    <div class="skill-progress" style="--progress: 95%"></div>
+                    <div class="skill-level">Expert</div>
+                </div>
+                <div class="skill-chip">
+                    <div class="skill-glow"></div>
+                    <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+                    </svg>
+                    <span>Expo</span>
+                    <div class="skill-progress" style="--progress: 90%"></div>
+                    <div class="skill-level">Advanced</div>
+                </div>
+                <div class="skill-chip">
+                    <div class="skill-glow"></div>
+                    <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/>
+                    </svg>
+                    <span>Firebase</span>
+                    <div class="skill-progress" style="--progress: 85%"></div>
+                    <div class="skill-level">Advanced</div>
+                </div>
+                <div class="skill-chip">
+                    <div class="skill-glow"></div>
+                    <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 12l2 2 4-4"/>
+                        <path d="M21 12c.552 0 1-.448 1-1V5c0-.552-.448-1-1-1H3c-.552 0-1 .448-1 1v6c0 .552.448 1 1 1h18z"/>
+                    </svg>
+                    <span>TypeScript</span>
+                    <div class="skill-progress" style="--progress: 88%"></div>
+                    <div class="skill-level">Advanced</div>
+                </div>
+                <div class="skill-chip">
+                    <div class="skill-glow"></div>
+                    <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                        <polyline points="3.27,6.96 12,12.01 20.73,6.96"/>
+                        <line x1="12" y1="22.08" x2="12" y2="12"/>
+                    </svg>
+                    <span>REST APIs</span>
+                    <div class="skill-progress" style="--progress: 92%"></div>
+                    <div class="skill-level">Expert</div>
+                </div>
+                <div class="skill-chip">
+                    <div class="skill-glow"></div>
+                    <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                    </svg>
+                    <span>Redux/Context</span>
+                    <div class="skill-progress" style="--progress: 80%"></div>
+                    <div class="skill-level">Intermediate</div>
+                </div>
+                <div class="skill-chip">
+                    <div class="skill-glow"></div>
+                    <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 19l7-7 3 3-7 7-3-3z"/>
+                        <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
+                        <path d="M2 2l7.586 7.586"/>
+                        <circle cx="11" cy="11" r="2"/>
+                    </svg>
+                    <span>UI/UX Design</span>
+                    <div class="skill-progress" style="--progress: 75%"></div>
+                    <div class="skill-level">Intermediate</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Project -->
+    <section class="featured-project" id="projects">
+        <div class="project-bg-decoration">
+            <div class="geometric-shape shape-triangle"></div>
+            <div class="geometric-shape shape-circle"></div>
+            <div class="geometric-shape shape-square"></div>
+        </div>
+
+        <div class="container">
+    <h2 class="section-title">Featured Learning Path</h2>
+    <div class="project-intro">
+        <p>Helping students discover the best resources to master new skills</p>
+    </div>
+    <div class="project-spotlight">
+        <div class="project-image">
+            <div class="image-overlay"></div>
+            <div class="play-button">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="5,3 19,12 5,21"/>
+                </svg>
+            </div>
+            <img src="./assets/flow.PNG" alt="E-Learning App Interface" />
+        </div>
+        <div class="project-details">
+            <div class="project-badge">Featured Project</div>
+            <h3 class="project-title">Mobile App development Journey</h3>
+            <div class="project-process">
+                <div class="process-step">
+                    <h4>Challenge</h4>
+                    <p>Students often struggle to find curated and reliable courses and resources for learning new Skills efficiently.</p>
+                </div>
+                <div class="process-step">
+                    <h4>Solution</h4>
+                    <p>Built a React Native app that guides students through subjects, recommending best courses, videos, and articles for each topic.</p>
+                </div>
+                <div class="process-step">
+                    <h4>Result</h4>
+                    <p>Students can now explore courses like HTML, CSS, JavaScript, and React with recommended resources from across the web, improving learning efficiency and knowledge retention.</p>
+                </div>
+            </div>
+            <div class="tech-stack">
+                <span class="tech-tag">React Native</span>
+                <span class="tech-tag">Expo</span>
+                <span class="tech-tag">Firebase</span>
+                <span class="tech-tag">YouTube API</span>
+                <span class="tech-tag">REST APIs</span>
+            </div>
+            <!-- <div class="project-metrics">
+                <div class="metric">
+                    <div class="metric-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <span class="metric-value">10K+</span>
+                    <span class="metric-label">Active Students</span>
+                </div>
+                <div class="metric">
+                    <div class="metric-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12,6 12,12 16,14"/>
+                        </svg>
+                    </div>
+                    <span class="metric-value">1.5s</span>
+                    <span class="metric-label">Resource Load Time</span>
+                </div>
+                <div class="metric">
+                    <div class="metric-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                        </svg>
+                    </div>
+                    <span class="metric-value">4.9★</span>
+                    <span class="metric-label">Student Rating</span>
+                </div>
+            </div> -->
+        </div>
+    </div>
+    <!-- <div class="project-thumbnails">
+        <div class="thumbnail active" data-project="frontend">
+            <div class="thumbnail-overlay"></div>
+            <img src="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Front-End Path" />
+            <span>Front-End</span>
+        </div>
+        <div class="thumbnail" data-project="backend">
+            <div class="thumbnail-overlay"></div>
+            <img src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Backend Path" />
+            <span>Back-End</span>
+        </div>
+        <div class="thumbnail" data-project="mobile">
+            <div class="thumbnail-overlay"></div>
+            <img src="https://images.pexels.com/photos/1181672/pexels-photo-1181672.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Mobile Development Path" />
+            <span>Mobile Dev</span>
+        </div>
+    </div> -->
+</div>
+
+    </section>
+
+    <!-- Project Gallery -->
+    <section class="project-gallery">
+        <div class="gallery-bg-decoration">
+            <div class="hexagon-pattern"></div>
+        </div>
+        <div class="container">
+            <h2 class="section-title">Project Gallery</h2>
+            <div class="gallery-filter">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+                <button class="filter-btn" data-filter="web">Web Apps</button>
+                <button class="filter-btn" data-filter="ui">UI/UX</button>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item large">
+                    <div class="gallery-decoration"></div>
+                    <img src="https://images.pexels.com/photos/147413/twitter-facebook-together-exchange-of-information-147413.jpeg?auto=compress&cs=tinysrgb&w=600" alt="FoodieHub App" />
+                    <div class="gallery-overlay">
+                        <div class="overlay-decoration"></div>
+                        <h3>FoodieHub</h3>
+                        <p>Restaurant discovery and ordering platform</p>
+                        <div class="project-tags">
+                            <span class="tag">React Native</span>
+                            <span class="tag">Firebase</span>
+                        </div>
+                        <button class="gallery-btn">View Case Study</button>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-decoration"></div>
+                    <img src="https://images.pexels.com/photos/4164418/pexels-photo-4164418.jpeg?auto=compress&cs=tinysrgb&w=400" alt="FitTrack App" />
+                    <div class="gallery-overlay">
+                        <div class="overlay-decoration"></div>
+                        <h3>FitTrack</h3>
+                        <p>Fitness tracking and workout planning</p>
+                        <div class="project-tags">
+                            <span class="tag">Expo</span>
+                            <span class="tag">Redux</span>
+                        </div>
+                        <button class="gallery-btn">View Case Study</button>
+                    </div>
+                </div>
+                <div class="gallery-item tall">
+                    <div class="gallery-decoration"></div>
+                    <img src="https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=400" alt="BudgetPal App" />
+                    <div class="gallery-overlay">
+                        <div class="overlay-decoration"></div>
+                        <h3>BudgetPal</h3>
+                        <p>Personal finance management tool</p>
+                        <div class="project-tags">
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">Supabase</span>
+                        </div>
+                        <button class="gallery-btn">View Case Study</button>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-decoration"></div>
+                    <img src="https://images.pexels.com/photos/1181676/pexels-photo-1181676.jpeg?auto=compress&cs=tinysrgb&w=400" alt="TaskFlow App" />
+                    <div class="gallery-overlay">
+                        <div class="overlay-decoration"></div>
+                        <h3>TaskFlow</h3>
+                        <p>Team collaboration and project management</p>
+                        <div class="project-tags">
+                            <span class="tag">React Native</span>
+                            <span class="tag">WebSocket</span>
+                        </div>
+                        <button class="gallery-btn">View Case Study</button>
+                    </div>
+                </div>
+                <div class="gallery-item wide">
+                    <div class="gallery-decoration"></div>
+                    <img src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=600" alt="ShopEasy App" />
+                    <div class="gallery-overlay">
+                        <div class="overlay-decoration"></div>
+                        <h3>ShopEasy</h3>
+                        <p>E-commerce mobile application</p>
+                        <div class="project-tags">
+                            <span class="tag">Stripe</span>
+                            <span class="tag">Push Notifications</span>
+                        </div>
+                        <button class="gallery-btn">View Case Study</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How I Work -->
+    <section class="process" id="process">
+        <div class="process-bg-decoration">
+            <div class="wave-pattern"></div>
+        </div>
+        <div class="container">
+            <h2 class="section-title">How I Work</h2>
+            <div class="process-timeline"></div>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <div class="step-connector"></div>
+                    <div class="step-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 11H5a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2z"/>
+                            <path d="M19 11h-4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2z"/>
+                            <path d="M5 11V7a7 7 0 0 1 14 0v4"/>
+                        </svg>
+                    </div>
+                    <h3>Discover</h3>
+                    <p>Understanding your vision, target audience, and business goals to create the perfect mobile solution.</p>
+                    <span class="step-duration">1-2 days</span>
+                    <div class="step-details">
+                        <ul>
+                            <li>Requirements analysis</li>
+                            <li>User research</li>
+                            <li>Technical planning</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <div class="step-connector"></div>
+                    <div class="step-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                        </svg>
+                    </div>
+                    <h3>Build</h3>
+                    <p>Developing with clean code, regular updates, and iterative feedback to ensure quality delivery.</p>
+                    <span class="step-duration">2-6 weeks</span>
+                    <div class="step-details">
+                        <ul>
+                            <li>Agile development</li>
+                            <li>Weekly demos</li>
+                            <li>Code reviews</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <div class="step-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                            <circle cx="12" cy="12" r="4"/>
+                        </svg>
+                    </div>
+                    <h3>Deliver</h3>
+                    <p>App store deployment, testing, documentation, and ongoing support to ensure your success.</p>
+                    <span class="step-duration">3-5 days</span>
+                    <div class="step-details">
+                        <ul>
+                            <li>App store submission</li>
+                            <li>Performance testing</li>
+                            <li>Documentation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume & Services -->
+    <section class="resume-services">
+        <div class="services-bg-decoration">
+            <div class="circuit-pattern"></div>
+        </div>
+        <div class="container">
+            <div class="resume-services-grid">
+                <div class="resume-section">
+                    <h2 class="section-title">Resume & Availability</h2>
+                    <div class="resume-card">
+                        <div class="card-decoration"></div>
+                        <div class="availability-status">
+                            <div class="status-indicator available"></div>
+                            <span>Available for new projects</span>
+                        </div>
+                        <button class="download-resume">
+                      
+                            Hire On Freelancer
+                        </button>
+                        <div class="rate-info">
+                            <span class="rate">$10/hour</span>
+                            <span class="rate-note">Project rates available</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="services-section">
+                    <h2 class="section-title">Services & Pricing</h2>
+                    <div class="services-list">
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                                </svg>
+                            </div>
+                            <h3>Small App/MVP</h3>
+                            <p>Basic functionality, 3-5 screens</p>
+                            <div class="service-details">
+                                <span class="price">$500 - $1,000</span>
+                                <span class="timeline">3-5 weeks</span>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                                </svg>
+                            </div>
+                            <h3>Medium App</h3>
+                            <p>Complex features, API integration</p>
+                            <div class="service-details">
+                                <span class="price">$1,000 - $2,000</span>
+                                <span class="timeline">4-8 weeks</span>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                                    <path d="M2 17l10 5 10-5"/>
+                                    <path d="M2 12l10 5 10-5"/>
+                                </svg>
+                            </div>
+                            <h3>Enterprise Solution</h3>
+                            <p>Custom development, full-scale app</p>
+                            <div class="service-details">
+                                <span class="price">$3,500 – $6,000</span>
+                                <span class="timeline">8+ weeks</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <div class="contact-bg-decoration">
+            <div class="particle-system">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2 class="section-title">Start Your Project</h2>
+                    <p class="contact-description">Ready to bring your mobile app idea to life? Let's discuss your project and create something amazing together.</p>
+                    <div class="contact-highlights">
+                        <div class="highlight-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                <polyline points="22,4 12,14.01 9,11.01"/>
+                            </svg>
+                            <span>100% Project Success Rate</span>
+                        </div>
+                        <div class="highlight-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                            </svg>
+                            <span>Fast Turnaround</span>
+                        </div>
+                        <div class="highlight-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 12l2 2 4-4"/>
+                                <path d="M21 12c.552 0 1-.448 1-1V5c0-.552-.448-1-1-1H3c-.552 0-1 .448-1 1v6c0 .552.448 1 1 1h18z"/>
+                            </svg>
+                            <span>Quality Guaranteed</span>
+                        </div>
+                    </div>
+                    <div class="response-time">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12,6 12,12 16,14"/>
+                        </svg>
+                        <span>Typically replies within 24 hours</span>
+                    </div>
+                    <div class="contact-methods">
+                        <a href="" class="contact-method">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                            yasinmk604@gmail.com
+                        </a>
+                        <a href="https://wa.me/1234567890" class="contact-method">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                            </svg>
+                            WhatsApp
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-decoration"></div>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                        <div class="input-decoration"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                        <div class="input-decoration"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="project">Project Brief</label>
+                        <textarea id="project" name="project" rows="5" placeholder="Tell me about your project idea, timeline, and budget..." required></textarea>
+                        <div class="input-decoration"></div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <div class="btn-decoration"></div>
+                        <span class="btn-text">Send Message</span>
+             
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-decoration">
+            <div class="footer-pattern"></div>
+        </div>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <svg class="footer-logo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                        <path d="M2 17l10 5 10-5"/>
+                        <path d="M2 12l10 5 10-5"/>
+                    </svg>
+                    <span>Yasin Malak</span>
+                </div>
+                <div class="footer-links">
+                    <a href="#hero">Home</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Work</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://github.com" aria-label="GitHub">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                            <rect x="2" y="9" width="4" height="12"/>
+                            <circle cx="4" cy="4" r="2"/>
+                        </svg>
+                    </a>
+                    <a href="https://twitter.com" aria-label="Twitter">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 YasinMK. All rights reserved.</p>
+                <div class="accessibility-options">
+                    <button class="font-size-toggle" id="fontToggle">Aa</button>
+                    <button class="contrast-toggle" id="contrastToggle">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 2v20"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+            <div class="modal-decoration"></div>
+            <div class="modal-header">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                    <polyline points="22,4 12,14.01 9,11.01"/>
+                </svg>
+                <h3>Message Sent!</h3>
+            </div>
+            <p>Thanks for reaching out! I'll get back to you within 24 hours.</p>
+            <button class="btn btn-primary" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <!-- Cursor Follower -->
+    <div class="cursor-follower" id="cursorFollower"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
