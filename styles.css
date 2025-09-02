@@ -771,6 +771,7 @@ h1, h2, h3, h4, h5, h6 {
 .project-image {
     border-radius: var(--radius-lg);
     overflow: hidden;
+    background-color:white;
     box-shadow: var(--shadow-xl);
     transform: rotate(-2deg);
     transition: transform var(--transition-base);
@@ -827,7 +828,7 @@ h1, h2, h3, h4, h5, h6 {
 .project-image img {
     width: 100%;
     height: 400px;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .project-title {
