@@ -1,3 +1,71 @@
+/* Hide default cursor everywhere */
+* {
+  cursor: none !important;
+}
+
+.cursor,
+.cursor-outline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate3d(-50%,-50%,0);
+  transition: transform .4s cubic-bezier(.2,.8,.2,1), opacity .12s;
+}
+
+
+.cursor {
+  width: var(--cursor-size);
+  height: var(--cursor-size);
+  border-radius: 50%;
+  background: var(--cursor-color);
+}
+
+.cursor-outline {
+  width: var(--cursor-outline-size);
+  height: var(--cursor-outline-size);
+  border-radius: 50%;
+  border: 2px solid var(--cursor-outline-border);
+}
+.cursor--hidden { opacity: 0; }
+.cursor--expand { transform: translate3d(-50%,-50%,0) scale(1.6); }
+.cursor-outline--hover { border-color: var(--accent); transform: translate3d(-50%,-50%,0) scale(1.2); }
+
+.click-ripple {
+  position: fixed;
+  z-index: 9998;
+  pointer-events: none;
+  border-radius: 50%;
+  background: rgba(255,255,0,0.15);
+  opacity: 0;
+  transform: translate3d(-50%,-50%,0) scale(0.2);
+}
+
+/* Hide cursor entirely on touch devices */
+@media (hover:none) {
+  .cursor, .cursor-outline, .click-ripple { display: none; }
+}
+
+
+html[data-theme='light'] {
+  --cursor-color: #14B8A6;;        /* dark dot for light background */
+  --cursor-outline-border: #0d7e71;;
+  --cursor-accent: #000;                  /* hover accent in light mode */
+}
+
+html[data-theme='dark'] {
+  --cursor-color: rgba(255,255,255,0.9);  /* light dot for dark background */
+  --cursor-outline-border: rgba(255,255,255,0.4);
+  --cursor-accent: yellow;                /* keep yellow accent or change */
+}
+
+
+
+
+
+
+
 /* Reset and Base Styles */
 * {
     margin: 0;
@@ -6,6 +74,10 @@
 }
 
 :root {
+      --cursor-size: 10px;
+  --cursor-outline-size: 40px;
+  --cursor-color: rgba(255,255,255,0.9);
+  --accent: yellow;
     /* Color System */
     --primary: #14B8A6;
     --primary-dark: #0F766E;

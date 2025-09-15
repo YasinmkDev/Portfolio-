@@ -718,10 +718,71 @@
             <button class="btn btn-primary" onclick="closeModal()">Close</button>
         </div>
     </div>
+<div class="cursor"></div>
 
     <!-- Cursor Follower -->
-    <div class="cursor-follower" id="cursorFollower"></div>
+<div class="cursor" id="cursorDot"></div>
+<div class="cursor-outline" id="cursorOutline"></div>
+<div class="click-ripple" id="clickRipple"></div>
 
     <script src="script.js"></script>
+<script>
+(function(){
+  const cursor = document.getElementById('cursorDot');
+  const outline = document.getElementById('cursorOutline');
+  const ripple = document.getElementById('clickRipple');
+  let mouseX=0, mouseY=0, outlineX=0, outlineY=0;
+
+  function lerp(a,b,n){ return (1-n)*a + n*b; }
+  function animate(){
+    outlineX = lerp(outlineX, mouseX, 0.16);
+    outlineY = lerp(outlineY, mouseY, 0.16);
+    outline.style.transform = `translate3d(${outlineX}px,${outlineY}px,0) translate(-50%,-50%)`;
+    cursor.style.transform = `translate3d(${mouseX}px,${mouseY}px,0) translate(-50%,-50%)`;
+    requestAnimationFrame(animate);
+  }
+  requestAnimationFrame(animate);
+
+  document.addEventListener('mousemove', e => { mouseX = e.clientX; mouseY = e.clientY; });
+  document.addEventListener('mouseleave', () => {
+    cursor.classList.add('cursor--hidden');
+    outline.classList.add('cursor--hidden');
+  });
+  document.addEventListener('mouseenter', () => {
+    cursor.classList.remove('cursor--hidden');
+    outline.classList.remove('cursor--hidden');
+  });
+
+  const interactive = 'a, button';
+  document.addEventListener('pointerover', e => {
+    if(e.target.closest(interactive)){
+      cursor.classList.add('cursor--expand');
+      outline.classList.add('cursor-outline--hover');
+    }
+  });
+  document.addEventListener('pointerout', e => {
+    if(e.target.closest(interactive)){
+      cursor.classList.remove('cursor--expand');
+      outline.classList.remove('cursor-outline--hover');
+    }
+  });
+
+  document.addEventListener('pointerdown', e => {
+    ripple.style.left = e.clientX+'px';
+    ripple.style.top = e.clientY+'px';
+    ripple.style.width='16px';
+    ripple.style.height='16px';
+    ripple.style.opacity='1';
+    ripple.style.transition='none';
+    ripple.style.transform='translate3d(-50%,-50%,0) scale(0.2)';
+    requestAnimationFrame(()=>{
+      ripple.style.transition='opacity 360ms ease, transform 480ms ease';
+      ripple.style.transform='translate3d(-50%,-50%,0) scale(20)';
+      ripple.style.opacity='0';
+    });
+  });
+})();
+</script>
+
 </body>
 </html>
